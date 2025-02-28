@@ -2,7 +2,7 @@ name: Despliege A Github Pages Del MPA Con Vite
 
 on:
 push:
-branches: ["main"]
+branches: ["master"]
 workflow_dispatch:
 
 permissions:
