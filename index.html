@@ -9,20 +9,7 @@
 </head>
 
 <body>
-  <header>
-    <div>
-      <img src="https://picsum.photos/id/93/64/64" alt="Brand Logo" />
-      <h1>Logo Empresa</h1>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="#plans">Precios</a></li>
-        <li><a href="#signin">Sign In</a></li>
-      </ul>
-    </nav>
-  </header>
+  {{>header}}
   <!-- Que es preprocesador de CSS-->
   <!--
       Permite Generar CSS a partir de la sintaxis única del preprocesador
@@ -115,17 +102,7 @@
 
     </section>
   </main>
-
-  <footer class="footer">
-    <div class="footer-container">
-      <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
-      <ul class="footer-links">
-        <li><a href="#">Política de privacidad</a></li>
-        <li><a href="#">Términos de servicio</a></li>
-        <li><a href="#">Contacto</a></li>
-      </ul>
-    </div>
-  </footer>
+  {{>footer}}
 
 </body>
 
