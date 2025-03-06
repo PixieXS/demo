@@ -18,6 +18,11 @@
       STYLUS
     -->
   <main>
+    <section class="cardsGallery">
+      {{#each productosImpulsados}}
+        {{> imgcards this}}
+      {{/each}}
+    </section>
     <section class="blogContainer">
       <article class="blog">
         <h1>Una Entraga de Blog</h1>
@@ -31,6 +36,25 @@
           voluptatum unde dicta? Quaerat minus quisquam sequi, ipsa, molestiae aliquid quod dignissimos ab deleniti, aut
           aliquam.</p>
       </article>
+    </section>
+    <section class="cardsGallery">
+      {{> imgcards
+        imgurl='https://picsum.photos/id/30/300/200'
+        imgdsc='Foto para la tarjeta'
+      }}
+      {{> imgcards
+        imgurl='https://picsum.photos/id/35/300/200'
+        imgdsc='Foto para la tarjeta 2'
+      }}
+      {{> imgcards
+        imgurl='https://picsum.photos/id/39/300/200'
+        imgdsc='Foto para la tarjeta 3'
+      }}
+    </section>
+     <section class="cardsGallery">
+      {{#each galeriaFotosProductos}}
+        {{> imgcards this}}
+      {{/each}}
     </section>
     <section>
       <div>
@@ -81,29 +105,9 @@
         </div>
 
       </div>
-    </section><br>
-
-      <!-- Half Inverted Panel -->
-    <section>
-      <section class="half-inverted-panel">
-        <div class="panel-text">
-          <h2>Titulo</h2>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum deserunt quae voluptatibus, facilis fugiat
-            culpa obcaecati corporis facere quidem nesciunt nobis enim odit rem amet voluptatum tempore officiis
-            distinctio mollitia!
-          </p>
-          <button class="btn">Saber más</button>
-        </div>
-        <div class="panel-image">
-          <img src="https://picsum.photos/600/400" alt="Imagen Ejemplo">
-        </div>
-      </section>
-
     </section>
   </main>
   {{>footer}}
-
 </body>
 
 </html>

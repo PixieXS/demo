@@ -19,6 +19,14 @@
           </div>
         </picture>
       </section>
+      <section>
+        <h2>Testimonios</h2>
+        <section class="cardsGallery">
+          {{#each testimonios}}
+            {{> imgcards this}}
+          {{/each}}
+        </section>
+      </section>
     </main>
     {{>footer}}
   </body>
