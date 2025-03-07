@@ -1,0 +1,30 @@
+<table>
+  <thead>
+    <tr>
+      <th>Nombre del Equipo</th>
+      <th>Partidos Jugados</th>
+      <th>Ganados</th>
+      <th>Empatados</th>
+      <th>Perdidos</th>
+      <th>Goles a Favor</th>
+      <th>Goles en Contra</th>
+      <th>Diferencia de Goles</th>
+      <th>Puntos</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each equipos}}
+    <tr>
+      <td>{{nombre}}</td>
+      <td>{{jugados}}</td>
+      <td>{{ganados}}</td>
+      <td>{{empatados}}</td>
+      <td>{{perdidos}}</td>
+      <td>{{golesFavor}}</td>
+      <td>{{golesContra}}</td>
+      <td>{{diferenciaGoles}}</td>
+      <td>{{puntos}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

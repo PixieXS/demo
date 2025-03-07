@@ -31,7 +31,7 @@ export const index = {
             imgdsc:'Foto para la tarjeta 4'
         },
         {
-            imgurl:'https://picsum.photos/id/305300/200',
+            imgurl:'https://picsum.photos/id/45/300/200',
             imgdsc:'Foto para la tarjeta 5'
         },
     ]

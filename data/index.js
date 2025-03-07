@@ -1,10 +1,9 @@
 import { navigation } from "./common/navigation"
-
-import { index as indexPageData} from "./pages/index"
+import { index as indexPageData } from "./pages/index"
 import { contactus as contactUsPageData } from "./pages/contactus"
+import { equipos as equiposPageData } from "./pages/equipos"
 
-
-export const getPageContext = (pagePath)=>{
+export const getPageContext = (pagePath) => {
     console.log("Page to Load Context:", pagePath)
     const commonVariables = {
         ...navigation
@@ -14,15 +13,23 @@ export const getPageContext = (pagePath)=>{
     console.log("Page been loaded:", pagePath);
     switch (pagePath) {
         case '/index.html':
-            pageVariables = indexPageData
+            pageVariables = indexPageData;
             break;
         case '/contactus.html':
-            pageVariables = contactUsPageData
+            pageVariables = contactUsPageData;
+            break;
+        case '/equipos.html': // Caso para la página de equipos
+            pageVariables = equiposPageData;
+            break;
+        default:
+            console.log("Página no encontrada:", pagePath);
     }
+
     const finalContext = {
         ...commonVariables,
         ...pageVariables
     }
+
     console.log("Context: ", JSON.stringify(finalContext, null, 2));
-    return finalContext
+    return finalContext;
 }
