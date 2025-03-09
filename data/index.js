@@ -1,7 +1,10 @@
 import { navigation } from "./common/navigation"
+import Handlebars from 'handlebars';
 import { index as indexPageData } from "./pages/index"
 import { contactus as contactUsPageData } from "./pages/contactus"
 import { equipos as equiposPageData } from "./pages/equipos"
+import { deportes as deportesPageData } from "./pages/deportes";
+
 
 export const getPageContext = (pagePath) => {
     console.log("Page to Load Context:", pagePath)
@@ -18,18 +21,25 @@ export const getPageContext = (pagePath) => {
         case '/contactus.html':
             pageVariables = contactUsPageData;
             break;
-        case '/equipos.html': // Caso para la página de equipos
+        case '/equipos.html': 
             pageVariables = equiposPageData;
             break;
+        case '/deportes.html': 
+            pageVariables = deportesPageData;
+            break;
         default:
-            console.log("Página no encontrada:", pagePath);
-    }
+                console.log("Página no encontrada:", pagePath);
+            }
 
     const finalContext = {
         ...commonVariables,
         ...pageVariables
     }
 
+    Handlebars.registerHelper('eq', function (a, b) {
+        return a === b;
+    });
+    
     console.log("Context: ", JSON.stringify(finalContext, null, 2));
     return finalContext;
 }

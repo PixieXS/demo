@@ -1,0 +1,27 @@
+<table>
+  <thead>
+    <tr>
+      <th>Nombre del Deporte</th>
+      <th>Descripción</th>
+      <th>Requerimientos</th>
+      <th>Ranking</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each deportes}}
+    <tr>
+      <td>{{nombre}}</td>
+      <td>{{descripcion}}</td>
+      <td>{{requerimientos}}</td>
+      <td>
+        {{#if (eq ranking 5)}} ★★★★★
+        {{else if (eq ranking 4)}} ★★★★☆
+        {{else if (eq ranking 3)}} ★★★☆☆
+        {{else if (eq ranking 2)}} ★★☆☆☆
+        {{else}} ★☆☆☆☆
+        {{/if}}
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
