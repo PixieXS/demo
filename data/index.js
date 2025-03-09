@@ -4,6 +4,7 @@ import { index as indexPageData } from "./pages/index"
 import { contactus as contactUsPageData } from "./pages/contactus"
 import { equipos as equiposPageData } from "./pages/equipos"
 import { deportes as deportesPageData } from "./pages/deportes";
+import { testimonios as testimoniosPageData } from "./pages/testimonios";
 
 
 export const getPageContext = (pagePath) => {
@@ -17,6 +18,7 @@ export const getPageContext = (pagePath) => {
     switch (pagePath) {
         case '/index.html':
             pageVariables = indexPageData;
+            pageVariables = testimoniosPageData;
             break;
         case '/contactus.html':
             pageVariables = contactUsPageData;

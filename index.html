@@ -106,6 +106,21 @@
 
       </div>
     </section>
+
+
+    <section class="testimonios">
+      <h1>Testimonios</h1>
+      <ul>
+          {{#each testimonios}}
+          <li class="testimonial-item">
+              <blockquote>
+                  <p>"{{mensaje}}"</p>
+                  <footer>— <strong>{{nombre}}</strong>, <time datetime="{{fecha}}">{{fecha}}</time></footer>
+              </blockquote>
+          </li>
+          {{/each}}
+      </ul>
+  </section>
   </main>
   {{>footer}}
 </body>
